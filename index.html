@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Contacts</h1>
+      <span id="count"></span>
+    </div>
+    <div class="actions">
+      <button type="button" id="remindersBtn" class="btn ghost bell-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
+        Reminders
+        <span id="reminderCount" class="badge" hidden></span>
+      </button>
+      <button type="button" id="importBtn" class="btn ghost">Import JSON</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <button type="button" id="exportBtn" class="btn ghost">Export JSON</button>
+      <button type="button" id="newBtn" class="btn primary">New contact</button>
+    </div>
+  </header>
+
+  <section id="upcoming" class="upcoming" aria-label="Upcoming birthdays and anniversaries"></section>
+
+  <main class="main">
+    <div class="toolbar">
+      <input type="search" id="search" class="search" placeholder="Search name, phone, email, address or tag" aria-label="Search contacts">
+      <div class="view-switch" role="group" aria-label="Layout">
+        <button type="button" data-view="list" aria-pressed="true">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M1 2h14v2H1zM1 7h14v2H1zM1 12h14v2H1z"/></svg>
+          List
+        </button>
+        <button type="button" data-view="tile" aria-pressed="false">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M1 1h4v4H1zM6 1h4v4H6zM11 1h4v4h-4zM1 6h4v4H1zM6 6h4v4H6zM11 6h4v4h-4zM1 11h4v4H1zM6 11h4v4H6zM11 11h4v4h-4z"/></svg>
+          Tiles
+        </button>
+        <button type="button" data-view="card" aria-pressed="false">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M1 1h6.5v6.5H1zM8.5 1H15v6.5H8.5zM1 8.5h6.5V15H1zM8.5 8.5H15V15H8.5z"/></svg>
+          Cards
+        </button>
+      </div>
+    </div>
+    <div id="tagFilter" class="tag-filter" aria-label="Filter by tag"></div>
+    <div id="collection" class="collection view-list"></div>
+  </main>
+
+  <dialog id="drawer" class="drawer" aria-label="Contact">
+    <div id="pane" class="pane"></div>
+  </dialog>
+
+  <dialog id="reminderSheet" class="drawer sheet" aria-label="Reminders">
+    <div id="reminderPane" class="pane"></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+<!-- ============================================================
+     OLD CODE (v1) - kept for reference, not rendered
+     ============================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Contacts</h1>
+      <span id="count"></span>
+    </div>
+    <div class="actions">
+      <button type="button" id="importBtn" class="btn ghost">Import JSON</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <button type="button" id="exportBtn" class="btn ghost">Export JSON</button>
+      <button type="button" id="newBtn" class="btn primary">New contact</button>
+    </div>
+  </header>
+
+  <section id="upcoming" class="upcoming" aria-label="Upcoming birthdays and anniversaries"></section>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <input type="search" id="search" class="search" placeholder="Search name, phone, email or tag" aria-label="Search contacts">
+      <div id="tagFilter" class="tag-filter" aria-label="Filter by tag"></div>
+      <ul id="list" class="contact-list"></ul>
+    </aside>
+    <section id="pane" class="pane" aria-live="polite"></section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+-->

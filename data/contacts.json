@@ -1,0 +1,91 @@
+{
+  "version": 2,
+  "contacts": [
+    {
+      "id": "c_seed_1",
+      "name": "Ananya Sharma",
+      "phones": [
+        { "label": "Mobile", "value": "+91 98100 12345" },
+        { "label": "Work", "value": "+91 11 4567 8900" }
+      ],
+      "emails": [
+        { "label": "Personal", "value": "ananya.sharma@example.com" },
+        { "label": "Work", "value": "ananya@studio-example.com" }
+      ],
+      "addresses": [
+        { "label": "Home", "value": "B-42, Sector 15\nNoida, Uttar Pradesh 201301" }
+      ],
+      "dob": "1990-11-14",
+      "anniversary": "2016-11-20",
+      "tags": ["Family", "Cousins"],
+      "relations": [
+        { "id": "c_seed_2", "type": "spouse" },
+        { "id": "c_seed_5", "type": "parent" },
+        { "id": "c_seed_6", "type": "child" },
+        { "id": "c_seed_3", "type": "friend" }
+      ],
+      "reminders": {
+        "birthday": { "on": true, "days": 7 },
+        "anniversary": { "on": true, "days": 7 }
+      }
+    },
+    {
+      "id": "c_seed_2",
+      "name": "Rohit Mehra",
+      "phones": [{ "label": "Mobile", "value": "+91 99990 55667" }],
+      "emails": [{ "label": "Personal", "value": "rohit.mehra@example.com" }],
+      "addresses": [{ "label": "Home", "value": "B-42, Sector 15\nNoida, Uttar Pradesh 201301" }],
+      "dob": "1987-06-03",
+      "anniversary": "2016-11-20",
+      "tags": ["Family"],
+      "relations": [
+        { "id": "c_seed_6", "type": "child" },
+        { "id": "c_seed_4", "type": "colleague" }
+      ]
+    },
+    {
+      "id": "c_seed_3",
+      "name": "Priya Nair",
+      "phones": [{ "label": "Mobile", "value": "+91 98711 33445" }],
+      "emails": [{ "label": "Personal", "value": "priya.nair@example.com" }],
+      "addresses": [{ "label": "Home", "value": "Flat 703, Palm Grove\nGurugram, Haryana 122002" }],
+      "dob": "1993-12-02",
+      "tags": ["Friends", "College"]
+    },
+    {
+      "id": "c_seed_4",
+      "name": "Vikram Singh",
+      "phones": [
+        { "label": "Work", "value": "+91 90123 45678" },
+        { "label": "Mobile", "value": "+91 90123 99887" }
+      ],
+      "emails": [{ "label": "Work", "value": "vikram.s@example.com" }],
+      "dob": "1979-03-21",
+      "anniversary": "2005-04-10",
+      "tags": ["Work", "Vendors"]
+    },
+    {
+      "id": "c_seed_5",
+      "name": "Kavita Sharma",
+      "phones": [{ "label": "Home", "value": "+91 11 2645 1122" }],
+      "addresses": [{ "label": "Home", "value": "7 Hauz Khas Enclave\nNew Delhi 110016" }],
+      "dob": "1962-12-05",
+      "tags": ["Family"]
+    },
+    {
+      "id": "c_seed_6",
+      "name": "Arjun Mehra",
+      "dob": "2019-11-25",
+      "tags": ["Family"]
+    },
+    {
+      "id": "c_seed_7",
+      "name": "Neha Sharma",
+      "phones": [{ "label": "Mobile", "value": "+91 98990 22110" }],
+      "emails": [{ "label": "Personal", "value": "neha.sharma@example.com" }],
+      "dob": "1994-08-17",
+      "tags": ["Family", "Cousins"],
+      "relations": [{ "id": "c_seed_5", "type": "parent" }]
+    }
+  ]
+}
